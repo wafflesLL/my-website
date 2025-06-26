@@ -9,7 +9,9 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  // tailwind.config.ts
+  plugins: [require("tailwind-scrollbar-hide")]
+
 };
 
 export default config;

@@ -1,21 +1,23 @@
-// components/ui/Button.tsx
-import React from "react";
-
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "default" | "outline" | "ghost";
-  size?: "sm" | "md" | "lg";
+  padding?: number; // padding in px
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export const Button: React.FC<ButtonProps> = ({
   children,
-  className,
+  className = "",
   variant = "default",
-  size = "md",
+  padding = 4, // default 16px
+  onClick,
   ...props
 }) => {
   return (
     <button
-      className="border-[7px] border-[#00D9FF] font-montserrat text-7xl text-white hover:shadow-[0_0_20px_#00D9FF] rounded-[30px] margin px-4 py-4"
+      className={`border-[7px] border-[#00D9FF] font-montserrat text-7xl text-white hover:shadow-[0_0_20px_#00D9FF] rounded-[30px] margin ${className}`}
+      style={{ paddingLeft: padding, paddingRight: padding, paddingTop: padding, paddingBottom: padding }}
+      onClick={onClick}
+      {...props}
     >
       {children}
     </button>
