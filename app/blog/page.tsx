@@ -12,8 +12,7 @@ const Page = () => {
     sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   const triggerRef = useRef<HTMLDivElement>(null);
-  const navbarRef = useRef<HTMLDivElement>(null);
-  const [isStuck, setIsStuck] = useState(false);
+  const [, setIsStuck] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
