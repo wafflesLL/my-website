@@ -1,5 +1,4 @@
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "default" | "outline" | "ghost";
   padding?: number; // padding in px
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
@@ -7,7 +6,6 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button: React.FC<ButtonProps> = ({
   children,
   className = "",
-  variant = "default",
   padding = 4, // default 16px
   onClick,
   ...props
