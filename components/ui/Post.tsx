@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-const sampleImage = '/images/images.jpg'
+const sampleImage = '/images/yo.jpg'
 
 interface PostProps {
   variant?: "imageLeft" | "imageRight";
