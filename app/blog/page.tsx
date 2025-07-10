@@ -5,7 +5,7 @@ import { ChevronDown} from 'lucide-react';
 import Post from '@/components/ui/Post';
 import Header from "@/components/ui/Header"; // Adjust the path as needed
 
-const page = () => {
+const Page = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const scrollToTopOfSection = () => {
@@ -48,4 +48,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

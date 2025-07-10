@@ -3,7 +3,7 @@ import Icon from '@/components/ui/Icon'
 import Image from 'next/image'
 const sampleImage = "/images/yo.jpg"
 
-const page = () => {
+const Page = () => {
   return (
     <div className="">
       <Header />
@@ -46,9 +46,12 @@ const page = () => {
           <Icon src={sampleImage} description="hi"/>
         </div>
       </div>
+      <div>
+
+      </div>
     </div>
   )
 
 }
 
-export default page
+export default Page

@@ -24,7 +24,7 @@ const Icon: React.FC<IconProps> = ({
   };
 
   return (
-    <div className="flex flex-col items-center gap-10">
+    <div className="flex flex-col items-center">
       <div
         className="border-[3px] border-[#00D9FF] rounded-[33px] p-2 hover:shadow-[0_0_20px_#00D9FF] group cursor-pointer"
         onClick={handleClick}
