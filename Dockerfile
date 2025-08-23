@@ -1,6 +1,4 @@
-# ----------------------------
-# Stage 1: Build environment
-# ----------------------------
+# operating system 
 FROM node:20-alpine AS build
 
 # Set working directory
@@ -9,15 +7,22 @@ WORKDIR /app
 # Copy package files and install dependencies
 COPY package*.json ./
 RUN npm install
+RUN apk update
+RUN apk upgrade
 RUN apk add --no-cache \
     bash \
+    neovim \
+    clang \
+    clang-extra-tools \
+    build-base \
+    unzip \
+    gzip \
     curl \
     git \
     make \
     g++ \
     python3 \
-    tmux \
-    vim 
+    tmux 
 
 # Copy all project files
 COPY . .

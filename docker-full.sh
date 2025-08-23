@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+docker build -t myapp:dev .
 set -Eeuo pipefail
 
 USER_NAME="${USER:-$(id -un)}"
