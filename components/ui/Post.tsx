@@ -6,6 +6,7 @@ interface PostProps {
   imageSrc?: string;
   title?: string;
   description?: string;
+  alt?: string;
 }
 
 const Post: React.FC<PostProps> = ({ 
@@ -13,6 +14,7 @@ const Post: React.FC<PostProps> = ({
   imageSrc = "/images/yo.jpg",
   title = "Project",
   description = "Description",
+  alt = "Post",
 }) => {
   // Choose which corners to round based on variant
   const imageRounded =
@@ -25,7 +27,7 @@ const Post: React.FC<PostProps> = ({
       <div className="flex-1 relative h-[400px]">
         <Image
           src={imageSrc}
-          alt="Project"
+          alt={alt}
           fill
           className={`object-cover ${imageRounded}`}
         />
