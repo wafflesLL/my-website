@@ -10,9 +10,9 @@ interface PostProps {
 
 const Post: React.FC<PostProps> = ({ 
   variant = "imageLeft",
-  imageSrc = "/images/yo.png",
-  title = "",
-  description = "",
+  imageSrc = "/images/yo.jpg",
+  title = "Project",
+  description = "Description",
 }) => {
   // Choose which corners to round based on variant
   const imageRounded =
