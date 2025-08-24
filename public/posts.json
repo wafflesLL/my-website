@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "glasses-for-good",
+    "variant": "imageLeft",
+    "imageSrc": "/images/gfgImage.png",
+    "title": "Glasses For Good",
+    "description": "description",
+    "alt": "Custom Glasses Project"
+  },
+  {
+    "slug": "immigrid",
+    "variant": "imageRight",
+    "imageSrc": "/images/yo.jpg",
+    "title": "Immigrid",
+    "description": "description",
+    "alt": "Tool for Immigrants"
+  }
+]
