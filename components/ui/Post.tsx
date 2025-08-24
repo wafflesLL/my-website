@@ -3,9 +3,9 @@ import Image from 'next/image'
 
 interface PostProps {
   variant?: "imageLeft" | "imageRight";
-  imageSrc: "string";
-  title: "string";
-  description: "string";
+  imageSrc?: "string";
+  title?: "string";
+  description?: "string";
 }
 
 const Post: React.FC<PostProps> = ({ 
