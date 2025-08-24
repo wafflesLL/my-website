@@ -6,6 +6,7 @@ import { ChevronDown} from 'lucide-react';
 import Post from '@/components/ui/Post';
 import Header from "@/components/ui/Header";
 import { PostsSchema, type PostRecord } from "@/schemas/post";
+import type { JSX } from "react";
 
 async function getPosts(): Promise<PostRecord[]> {
   const filePath = path.join(process.cwd(), "public", "posts.json");
