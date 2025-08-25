@@ -1,28 +1,11 @@
 "use server"
-import path from "node:path";
-import { readFile } from "node:fs/promises";
 import { Button } from "@/components/ui/Button";
 import { ChevronDown} from 'lucide-react';
 import Post from '@/components/ui/Post';
 import Header from "@/components/ui/Header";
-import { PostsSchema, type PostRecord } from "@/schemas/post";
-import type { JSX } from "react";
+import { getPosts } from "@/lib/posts.ts";
 
-async function getPosts(): Promise<PostRecord[]> {
-  const filePath = path.join(process.cwd(), "public", "posts.json");
-  const raw = await readFile(filePath, "utf8");
-  const json = JSON.parse(raw);
-  const parsed = PostsSchema.safeParse(json);
-  if (!parsed.success) {
-    const issues = parsed.error.issues
-      .map((i) => `* ${i.path.join(".") || "(root)"}: ${i.message}`)
-      .join("\n");
-      throw new Error("posts.json validation failed \n" + issues);
-  }
-  return parsed.data;
-}
-
-export default async function Page(): Promise<JSX.Element> {
+export default async function Page(): Promise<TSX.Element> {
   const posts = await getPosts();
   return (
     <div className="scroll-smooth hide-scrollbar no-scrollbar overflow-auto relative font-semibold flex flex-col items-center justify-center min-h-screen text-7xl font-montserrat gap-4">
@@ -40,6 +23,7 @@ export default async function Page(): Promise<JSX.Element> {
               imageSrc={p.imageSrc}
               title={p.title}
               description={p.description}
+              href={`blog/${p.slug}`}
               alt={p.alt}
             />
           ))}

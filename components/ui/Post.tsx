@@ -1,5 +1,5 @@
-import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface PostProps {
   variant?: "imageLeft" | "imageRight";
@@ -7,6 +7,7 @@ interface PostProps {
   title?: string;
   description?: string;
   alt?: string;
+  href?: string;
 }
 
 const Post: React.FC<PostProps> = ({ 
@@ -15,6 +16,7 @@ const Post: React.FC<PostProps> = ({
   title = "Project",
   description = "Description",
   alt = "Post",
+  href = "/",
 }) => {
   // Choose which corners to round based on variant
   const imageRounded =
@@ -33,7 +35,7 @@ const Post: React.FC<PostProps> = ({
         />
       </div>
       <div className="flex-1 flex flex-col text-center py-4 gap-4">
-        <div className="text-[#00D9FF]">{title}</div>
+        <Link href={href} className="text-[#00D9FF]">{title}</Link>
         <div className="text-4xl text-[#FFFFFF]">{description}</div>
       </div>
     </div>
