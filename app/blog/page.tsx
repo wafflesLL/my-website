@@ -1,5 +1,5 @@
 "use server"
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { ChevronDown} from 'lucide-react';
 import Post from '@/components/ui/Post';
 import Header from "@/components/ui/Header";

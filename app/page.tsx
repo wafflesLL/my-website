@@ -1,18 +1,18 @@
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function Home() {
 
   return (
-    <div className="font-semibold flex flex-col items-center justify-center min-h-screen text-7xl font-montserrat gap-4">
-      <div className="text-white">
+    <main className="font-semibold flex flex-col items-center justify-center min-h-screen text-7xl font-montserrat gap-4">
+      <h1>
         Hi, my name is <span className="text-[#00D9FF]">Liam</span>
-      </div>
+      </h1>
       <Link href="/blog">
-        <Button padding={8} className="text-7xl">
+        <Button>
           view my work
         </Button>
       </Link>
-    </div> 
+    </main> 
   );
 }
