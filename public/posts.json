@@ -2,17 +2,21 @@
   {
     "slug": "glasses-for-good",
     "variant": "imageLeft",
-    "imageSrc": "/images/gfgImage.png",
+    "imageSrc": "/images/gfgImage.webp",
     "title": "Glasses For Good",
     "description": "description",
-    "alt": "Custom Glasses Project"
+    "alt": "Custom Glasses Project",
+    "mdxSource": "/content/posts/glasses-for-good.mdx",
+    "inProgress": true
   },
   {
     "slug": "immigrid",
     "variant": "imageRight",
-    "imageSrc": "/images/yo.jpg",
+    "imageSrc": "/images/default.webp",
     "title": "Immigrid",
     "description": "description",
-    "alt": "Tool for Immigrants"
+    "alt": "Tool for Immigrants",
+    "mdxSource": "/content/posts/immigrid.mdx",
+    "inProgress": true
   }
 ]

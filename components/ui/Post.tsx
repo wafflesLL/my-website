@@ -8,6 +8,7 @@ interface PostProps {
   description?: string;
   alt?: string;
   href?: string;
+  inProgress?: boolean;
 }
 
 const Post: React.FC<PostProps> = ({ 
@@ -17,12 +18,18 @@ const Post: React.FC<PostProps> = ({
   description = "Description",
   alt = "Post",
   href = "/",
+  inProgress = true,
 }) => {
   // Choose which corners to round based on variant
   const imageRounded =
     variant === "imageRight"
       ? "rounded-tl-[80px] rounded-bl-[80px]"
       : "rounded-tr-[80px] rounded-br-[80px]";
+
+  let link = href;
+  if(inProgress){
+    link = "/in-progress";
+  }
 
   return (
     <div className={`flex w-screen gap-16 ${variant === "imageRight" ? "flex-row-reverse" : "flex-row"}`}>
@@ -35,7 +42,7 @@ const Post: React.FC<PostProps> = ({
         />
       </div>
       <div className="flex-1 flex flex-col text-center py-4 gap-4">
-        <Link href={href} className="text-[#00D9FF]">{title}</Link>
+        <Link href={link} className="text-[#00D9FF]">{title}</Link>
         <div className="text-4xl text-[#FFFFFF]">{description}</div>
       </div>
     </div>

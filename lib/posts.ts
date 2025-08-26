@@ -6,8 +6,7 @@ const POST_FILE = path.join(process.cwd(), "public", "posts.json");
 
 export async function getPosts(): Promise<PostRecord[]> {
   const raw = await readFile(POST_FILE, "utf8");
-  const json = JSON.parse(raw);
-  const parsed = PostsSchema.safeParse(json);
+  const parsed = PostsSchema.safeParse(JSON.parse(raw));
   if (!parsed.success) {
     const issues = parsed.error.issues
       .map((i) => `* ${i.path.join(".") || "(root)"}: ${i.message}`)
@@ -17,12 +16,16 @@ export async function getPosts(): Promise<PostRecord[]> {
   return parsed.data;
 }
 
-export async function getPostBySlug(slug: string): Promise<string> {
-  const posts = await getPosts();
-  return posts.find(p => p.slug === slug) ?? null;
-}
-
 export async function getAllSlugs(): Promise<string[]> {
   const posts = await getPosts();
   return posts.map(p => p.slug);
+}
+
+export async function getPostAndMDXSource(slug: string): Promise<string, string> {
+  const posts = await getPosts();
+  const post = posts.find(p => p.slug === slug) ?? null;
+
+  const mdxPath = path.join(process.cwd(), "public", post.mdxSource);
+  const mdxSource = await readFile(mdxPath, "utf8");
+  return { post, mdxSource };
 }

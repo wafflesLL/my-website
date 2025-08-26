@@ -1,7 +1,8 @@
 import type { Config } from 'tailwindcss';
+import typography from "@tailwindcss/typography";
 
 const config: Config = {
-  content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './content/**/*.{md,mdx}'],
   theme: {
     extend: {
       fontFamily: {
@@ -10,7 +11,7 @@ const config: Config = {
     },
   },
   // tailwind.config.ts
-  plugins: [require("tailwind-scrollbar-hide")]
+  plugins: [typography]
 
 };
 
