@@ -7,7 +7,7 @@
     "description": "description",
     "alt": "Custom Glasses Project",
     "mdxSource": "/content/posts/glasses-for-good.mdx",
-    "inProgress": true
+    "inProgress": false 
   },
   {
     "slug": "immigrid",
