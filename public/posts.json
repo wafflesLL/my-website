@@ -7,7 +7,11 @@
     "description": "description",
     "alt": "Custom Glasses Project",
     "mdxSource": "/content/posts/glasses-for-good.mdx",
-    "inProgress": false 
+    "inProgress": false,
+    "date": "08/27/2025",
+    "author": "Liam Loeffel",
+    "status": "Planning",
+    "githubLink": "https://github.com/wafflesLL/gfgfrontend"
   },
   {
     "slug": "immigrid",
@@ -17,6 +21,10 @@
     "description": "description",
     "alt": "Tool for Immigrants",
     "mdxSource": "/content/posts/immigrid.mdx",
-    "inProgress": true
+    "inProgress": false,
+    "date": "08/27/2025",
+    "author": "Liam Loeffel",
+    "status": "Paused",
+    "githubLink": ""
   }
 ]
