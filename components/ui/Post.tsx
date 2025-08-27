@@ -35,8 +35,8 @@ const Post: React.FC<PostProps> = ({
         />
       </div>
       <div className="flex-1 flex flex-col text-center py-4 gap-4">
-        <Link href={href} className="text-[#00D9FF]">{title}</Link>
-        <div className="text-4xl text-[#FFFFFF]">{description}</div>
+        <Link href={href} className="text-primary underline-offset-4 hover:underline">{title}</Link>
+        <div className="text-4xl text-foreground">{description}</div>
       </div>
     </div>
   )

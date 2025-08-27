@@ -1,6 +1,7 @@
 import path from "node:path";
 import { readFile } from "node:fs/promises";
 import { PostsSchema, type PostRecord } from "@/schemas/post"
+import { notFound } from "next/navigation";
 
 const POST_FILE = path.join(process.cwd(), "public", "posts.json");
 
@@ -21,9 +22,10 @@ export async function getAllSlugs(): Promise<string[]> {
   return posts.map(p => p.slug);
 }
 
-export async function getPostAndMDXSource(slug: string): Promise<string, string> {
+export async function getPostAndMDXSource(slug: string): Promise<{ post: PostRecord | null; mdxSource: string }> {
   const posts = await getPosts();
   const post = posts.find(p => p.slug === slug) ?? null;
+  if(!post) return notFound();
 
   const mdxPath = path.join(process.cwd(), "public", post.mdxSource);
   const mdxSource = await readFile(mdxPath, "utf8");

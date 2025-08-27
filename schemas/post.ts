@@ -22,7 +22,11 @@ export const PostSchema = z.object({
       (s) => s.startsWith("/content/posts/") && s.endsWith(".mdx"),
       { message: "contentPath must be content/posts/*.mdx" }
     ),
-  inProgress: z.boolean()
+  inProgress: z.boolean(),
+  date: z.string().optional(),
+  author: z.string().optional(),
+  status: z.string().optional(),
+  githubLink: z.string().optional(),
 });
 
 export const PostsSchema = z.array(PostSchema);
