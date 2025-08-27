@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Header from "@/components/ui/Header";
 import { redirect } from "next/navigation";
+import { MDXComponents } from "@/components/mdx/MDXComponents";
 
 export async function generateStaticParams() {
   const slugs = await getAllSlugs();
@@ -62,8 +63,8 @@ export default async function ProjectPage(props: { params: Promise<{ slug: strin
             priority
           />
         </div>
-        <div className="mdx mx-100">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{mdxSource}</ReactMarkdown>
+        <div className="mdx mx-80 my-8">
+          <ReactMarkdown remarkPlugins={[remarkGfm]} components={MDXComponents}>{mdxSource}</ReactMarkdown>
         </div>
       </article>
     </main>
