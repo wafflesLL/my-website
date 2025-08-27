@@ -4,16 +4,17 @@ import { ChevronDown} from 'lucide-react';
 import Post from '@/components/ui/Post';
 import Header from "@/components/ui/Header";
 import { getPosts } from "@/lib/posts";
+import Link from "next/link";
 
 export default async function Page() {
   const posts = await getPosts();
   return (
     <div className="scroll-smooth hide-scrollbar no-scrollbar overflow-auto relative font-semibold flex flex-col items-center justify-center min-h-screen text-7xl font-montserrat gap-4">
-      <div>Projects</div>
+      <h1>Projects</h1>
       <Button variant="default" asChild className="size-25 rounded-[20px]">
-        <a href="#projects-section">
+        <Link href="#projects-section" prefetch={false}>
           <ChevronDown strokeWidth={2.5} className="size-[100px]"/>
-        </a>
+        </Link>
       </Button>
       <div id="projects-section" className="absolute top-[100vh]">
         <Header/> 
