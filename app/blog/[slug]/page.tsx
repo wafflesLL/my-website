@@ -6,7 +6,6 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Header from "@/components/ui/Header";
 import { redirect } from "next/navigation";
-import Link from "next/link";
 
 export async function generateStaticParams() {
   const slugs = await getAllSlugs();
