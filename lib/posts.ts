@@ -21,7 +21,7 @@ export async function getAllSlugs(): Promise<string[]> {
   return posts.map(p => p.slug);
 }
 
-export async function getPostAndMDXSource(slug: string): Promise<string, string> {
+export async function getPostAndMDXSource(slug: string): Promise<{ post: PostRecord | null; mdxSource: string }> {
   const posts = await getPosts();
   const post = posts.find(p => p.slug === slug) ?? null;
 
