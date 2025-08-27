@@ -18,6 +18,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
   const data = await getPostAndMDXSource(slug);
   if(!data) return {title: "Project not Found"};
   const { post } = data;
+  if(!post) return notFound();
   return {
     title: post.title ?? post.slug,
     description: post.description,
@@ -30,6 +31,7 @@ export default async function ProjectPage(props: { params: Promise<{ slug: strin
   if (!data) return notFound();
 
   const { post, mdxSource } = data;
+  if(!post) return notFound();
   if(post.inProgress){
     redirect("/in-progress");
   }
@@ -48,7 +50,7 @@ export default async function ProjectPage(props: { params: Promise<{ slug: strin
             <p><span className="font-semibold">Author:</span> {post.author}</p>
             <p><span className="font-semibold">Date:</span> {post.date}</p>
             <p><span className="font-semibold">Status:</span> {post.status}</p>
-            {hasGithub && <p><Link href={post.githubLink} className="font-semibold underline underline-offset-4 text-foreground hover:text-primary">Github Repository</Link></p>}
+            {hasGithub && <p><a href={post.githubLink} className="font-semibold underline underline-offset-4 text-foreground hover:text-primary">Github Repository</a></p>}
           </div>
         </div>
         <div className="relative h-[260px] md:h-[480px] my-4">
