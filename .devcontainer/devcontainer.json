@@ -1,0 +1,11 @@
+{
+    "name": "Base Dev Container",
+    "build": {
+        "dockerfile": "../Dockerfile"
+    },
+    "settings": {},
+    "extensions": [],
+    "forwardPorts": [],
+    "postCreateCommand": "",
+    "workspaceFolder": "/app"
+}
