@@ -7,7 +7,7 @@ import remarkGfm from "remark-gfm";
 import Header from "@/components/ui/Header";
 import { redirect } from "next/navigation";
 
-export async function generateStaticParams(): Promise<string[]> {
+export async function generateStaticParams() {
   const slugs = await getAllSlugs();
   return slugs.map((slug) => ({slug}));
 }
