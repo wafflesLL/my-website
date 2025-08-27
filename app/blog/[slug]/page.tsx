@@ -63,7 +63,7 @@ export default async function ProjectPage(props: { params: Promise<{ slug: strin
             priority
           />
         </div>
-        <div className="mdx mx-100">
+        <div className="mdx mx-80 my-8">
           <ReactMarkdown remarkPlugins={[remarkGfm]} components={MDXComponents}>{mdxSource}</ReactMarkdown>
         </div>
       </article>
