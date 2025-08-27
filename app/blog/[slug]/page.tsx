@@ -44,10 +44,12 @@ export default async function ProjectPage(props: { params: Promise<{ slug: strin
             <div className="bg-primary w-4"></div>
             <h1 className="text-8xl font-semibold">{post.title ?? post.slug}</h1>
           </div>
-          <p><span className="font-semibold">Author:</span> {post.author}</p>
-          <p><span className="font-semibold">Date:</span> {post.date}</p>
-          <p><span className="font-semibold">Status:</span> {post.status}</p>
-          {hasGithub && <p><Link href={post.githubLink} className="font-semibold underline underline-offset-4 text-foreground hover:text-primary">Github Repository</Link></p>}
+          <div id="Project Info" className="flex flex-col gap-2">
+            <p><span className="font-semibold">Author:</span> {post.author}</p>
+            <p><span className="font-semibold">Date:</span> {post.date}</p>
+            <p><span className="font-semibold">Status:</span> {post.status}</p>
+            {hasGithub && <p><Link href={post.githubLink} className="font-semibold underline underline-offset-4 text-foreground hover:text-primary">Github Repository</Link></p>}
+          </div>
         </div>
         <div className="relative h-[260px] md:h-[480px] my-4">
           <Image
