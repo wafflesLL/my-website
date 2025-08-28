@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { Button } from '@/components/ui/button';
 
 interface PostProps {
   variant?: "imageLeft" | "imageRight";
@@ -35,8 +36,11 @@ const Post: React.FC<PostProps> = ({
         />
       </div>
       <div className="flex-1 flex flex-col text-center py-4 gap-4">
-        <Link href={href} className="text-primary underline-offset-4 hover:underline">{title}</Link>
-        <div className="text-4xl text-foreground">{description}</div>
+        <h2 className="text-primary">{title}</h2>
+        <div className="text-2xl text-foreground">{description}</div>
+        <Button variant="default" asChild className="self-center font-semibold">
+          <Link href={href}>View Article</Link>
+        </Button>
       </div>
     </div>
   )

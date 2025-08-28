@@ -24,7 +24,6 @@ RUN apk add --no-cache \
     python3 \
     tmux 
 
-RUN git config --global credential.helper cache
 # Copy all project files
 COPY . .
 
