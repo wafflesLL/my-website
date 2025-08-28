@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-ENV_FILE="/app/.env.local"
+ENV_FILE="./.env.local"
 
 set -a
 . "$ENV_FILE"
