@@ -188,7 +188,7 @@
   .mdx :where(td) { @apply align-top border-t border-slate-200 dark:border-slate-800 p-2; }
 
   /* Images */
-  .mdx :where(img) { @apply block max-w-full h-auto my-4; }
+  .mdx :where(img) { @apply block max-w-full h-auto my-4 rounded;}
 
   /* Code */
   .mdx :where(code) { @apply bg-[#000111] rounded px-1 py-0.5 text-[0.95em]; }
@@ -205,6 +205,7 @@
     @apply bg-background text-foreground;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    will-change: transform;
 
   }
 }
