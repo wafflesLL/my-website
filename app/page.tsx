@@ -19,7 +19,7 @@ export default async function Page() {
       </Button>
       <div id="projects-section" className="absolute top-[100vh]">
         <Header/> 
-        <div  className="flex flex-col gap-8 my-8 mx-8">
+        <div  className="flex flex-col gap-8 my-8 mx-40">
           {posts.map((p) => (
             <Post
               key={p.slug ?? p.imageSrc}
