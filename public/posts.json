@@ -26,5 +26,20 @@
     "author": "Liam Loeffel",
     "status": "Paused",
     "githubLink": ""
+  },
+  {
+    "slug": "my-website",
+    "variant": "imageLeft",
+    "imageSrc": "/images/default.webp",
+    "title": "My Website",
+    "description": "This project has served as a place to tinker with Next.js and Typscript in order to make a mural of my abilities in the field of web development.",
+    "alt": "My Website",
+    "mdxSource": "/content/posts/my-website.mdx",
+    "inProgress": true,
+    "date": "XX/XX/XXXX",
+    "author": "Liam Loeffel",
+    "status": "Active Development",
+    "githubLink": "https://github.com/wafflesLL/my-website"
   }
+
 ]
