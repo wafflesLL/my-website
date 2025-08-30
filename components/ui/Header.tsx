@@ -11,9 +11,6 @@ const Header = () => {
           <Link href="/">Home</Link>
         </Button>
         <Button asChild variant="link" className="text-3xl font-semibold">
-          <Link href="/blog">Projects</Link>
-        </Button>
-        <Button asChild variant="link" className="text-3xl font-semibold">
           <Link href="/in-progress">About</Link>
         </Button>
         <Button asChild variant="link" className="text-3xl font-semibold">
