@@ -23,7 +23,7 @@ const Post: React.FC<PostProps> = ({
   return (
     <div id="post-border" className=" overflow-hidden relative border border-[3px] border-primary/50 rounded-[20px] ">
       <div className={`flex gap-16 ${variant === "imageRight" ? "flex-row-reverse" : "flex-row"}`}>
-        <div className="flex-1 relative h-[400px]">
+        <div className="flex-1 relative h-[300px]">
           <Image
             src={imageSrc}
             alt={alt}
