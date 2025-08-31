@@ -19,7 +19,7 @@ export default async function Page() {
       </Button>
       <div id="projects-section" className="absolute top-[100vh]">
         <Header/> 
-        <div  className="flex flex-col gap-8 my-8 mx-40">
+        <div  className="flex flex-col gap-8 my-8 mx-60">
           {posts.map((p) => (
             <Post
               key={p.slug ?? p.imageSrc}
@@ -27,7 +27,7 @@ export default async function Page() {
               imageSrc={p.imageSrc}
               title={p.title}
               description={p.description}
-              href={`blog/${p.slug}`}
+              href={`${p.slug}`}
               alt={p.alt}
             />
           ))}
