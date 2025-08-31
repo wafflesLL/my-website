@@ -21,8 +21,8 @@ const Post: React.FC<PostProps> = ({
 }) => {
   // Choose which corners to round based on variant
   return (
-    <div id="post-border" className=" overflow-hidden relative border border-[3px] border-primary/50 rounded-[20px] ">
-      <div className={`flex gap-16 ${variant === "imageRight" ? "flex-row-reverse" : "flex-row"}`}>
+    <div id="post-border" className=" overflow-hidden relative border border-[3px] border-foreground/50 rounded-[20px] ">
+      <div className={`flex ${variant === "imageRight" ? "flex-row-reverse" : "flex-row"}`}>
         <div className="flex-1 relative h-[300px]">
           <Image
             src={imageSrc}
@@ -33,7 +33,7 @@ const Post: React.FC<PostProps> = ({
         </div>
         <div className="flex-1 flex flex-col text-center py-4 gap-4">
           <h2 id="post-title" className="text-primary text-4xl">{title}</h2>
-          <div className="text-2xl text-foreground">{description}</div>
+          <div className="text-2xl text-foreground mx-4">{description}</div>
           <Button variant="default" asChild className="self-center font-semibold">
             <Link href={href}>View Article</Link>
           </Button>

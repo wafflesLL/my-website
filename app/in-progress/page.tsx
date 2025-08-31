@@ -11,7 +11,7 @@ export default function InProgress() {
           This page is a work in progress,  
         </div>
         <Button asChild variant="link" className="text-3xl font-semibold text-primary">
-          <Link href="/blog">Back to Projects?</Link>
+          <Link href="/">Back to Projects?</Link>
         </Button>
       </div> 
     </>
