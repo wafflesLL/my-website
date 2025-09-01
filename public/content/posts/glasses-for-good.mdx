@@ -59,6 +59,14 @@ In this section I will explain how I plan to implement Frontend and Backend Feat
 
 ### Frontend
 
-Frontend UI Flowchart
 ![This is a flowchart dedpicting the flow of navigation that the user could take in our app](/images/gfg/flowchart.webp "Flowchart")
+
+The frontend app is inteded to be deployed on the iOS store, running off of [Expo Dev](https://docs.expo.dev/) with a React Native framework.
+
+### Backend
+
+* The backend is hosted from a [Proxmox](https://pve.proxmox.com/wiki/Main_Page) Linux server, hosting an Ubuntu server using [Qemu](https://www.qemu.org/) VMware.
+* I access the backend using an ssh tunnel where it will only trust users with public key verification.
+* The backend is using Python (version 3.12.3) for its accessible machine learning libraries like [Tensorflow](https://www.tensorflow.org/).
+* Using Tensorflow we plan on using a Linear Regression Model To predict the set of measurements for our glasses based off of measurments from the face using Labeled Data from a PostgreSQL library.
 
