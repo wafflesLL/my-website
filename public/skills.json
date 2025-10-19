@@ -1,0 +1,24 @@
+{
+  "skills": [ 
+    {
+      "name": "C",
+      "alt": "Icon showing my skills in C",
+      "image": "/images/icons/c.webp",
+      "description": "description"
+    },
+    {
+      "name": "C++",
+      "alt": "Icon showing my skills in C++",
+      "image": "/images/icons/cc.webp",
+      "description": "description"
+    }
+  ],
+  "developertools": [
+    {
+      "name": "Visual Studio Code",
+      "alt": "Icon showing my skills in Visual Studio Code",
+      "image": "/images/icons/vscode.webp",
+      "description": "description"
+    },
+  ]
+}

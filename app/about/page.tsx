@@ -1,7 +1,7 @@
 import Header from '@/components/ui/Header'
 import Icon from '@/components/ui/Icon'
 import Image from 'next/image'
-const sampleImage = "/images/yo.jpg"
+const sampleImage = "/images/default.webp"
 
 const Page = () => {
   return (
@@ -21,7 +21,7 @@ const Page = () => {
             Liam Loeffel
           </div>
           <div className="text-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat eget orci ac dapibus. Vivamus gravida quis lectus quis gravida. Sed molestie nisi consectetur neque faucibus, nec rutrum sapien tristique. Duis auctor venenatis neque et mollis. Suspendisse quis augue volutpat, vestibulum arcu ac, blandit diam. Nulla condimentum, lorem quis maximus ultricies, ante elit efficitur turpis, ac molestie lacus ligula sit amet metus. Maecenas volutpat nibh eu magna ultricies sagittis. Duis nibh felis, venenatis ut mattis eget, posuere eu tortor.
+            This is a description 
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@ const Page = () => {
           Skills
         </div>
         <div className="flex flex-row justify-center gap-10">
-          <Icon src={sampleImage} description="hi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat eget orci ac dapibus. Vivamus gravida quis lectus quis gravida. Sed molestie nisi consectetur neque faucibus, nec rutrum sapien tristique. Duis auctor venenatis neque et mollis. Suspendisse quis augue volutpat, vestibulum arcu ac, blandit diam. Nulla condimentum, lorem quis maximus ultricies, ante elit efficitur turpis, ac molestie lacus ligula sit amet metus. Maecenas volutpat nibh eu magna ultricies sagittis. Duis nibh felis, venenatis ut mattis eget, posuere eu tortor."/>
+          <Icon src={sampleImage} description="hi"/>
           <Icon src={sampleImage} description="hi"/>
           <Icon src={sampleImage} description="hi"/>
           <Icon src={sampleImage} description="hi"/>
