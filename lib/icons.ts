@@ -1,7 +1,6 @@
 import path from "node:path";
 import { readFile } from "node:fs/promises";
 import {IconSchema, type IconRecord} from "@/schemas/icon";
-import { notFound } from "next/navigation";
 
 const ICON_FILE = path.join(process.cwd(), "public", "icons.json");
 
@@ -18,12 +17,12 @@ export async function getIcons(): Promise<IconRecord> {
 }
 
 export async function getSkills() {
-  const icons = await getPosts();
+  const icons = await getIcons();
   return icons.map(p => p.skills);
 }
 
 export async function getDeveloperTools() {
-  const icons = await getPosts();
+  const icons = await getIcons();
   return icons.map(p => p.developertools);
 }
 
