@@ -21,10 +21,10 @@
     "description": "This project was intended to be used as a tool for new Immigrants in the United States to help them feel less culturally isolated and find groups of people they would be able to connect with culturally, and assist in obtaining important legal documentation",
     "alt": "Tool for Immigrants",
     "mdxSource": "/content/posts/immigrid.mdx",
-    "inProgress": true,
-    "date": "08/27/2025",
+    "inProgress": false,
+    "date": "10/25/2025",
     "author": "Liam Loeffel",
-    "status": "Paused",
+    "status": "Abandoned",
     "githubLink": ""
   },
   {
@@ -32,7 +32,7 @@
     "variant": "imageLeft",
     "imageSrc": "/images/default.webp",
     "title": "My Website",
-    "description": "This project has served as a place to tinker with Next.js and Typscript in order to make a mural of my abilities in the field of web development.",
+    "description": "This project has served as a place to tinker with Next.js and Typescript in order to make a mural of my abilities in the field of web development.",
     "alt": "My Website",
     "mdxSource": "/content/posts/my-website.mdx",
     "inProgress": true,
@@ -41,5 +41,4 @@
     "status": "Active Development",
     "githubLink": "https://github.com/wafflesLL/my-website"
   }
-
 ]
